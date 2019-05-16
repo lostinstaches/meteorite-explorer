@@ -1,23 +1,19 @@
 <template>
   <div>
-    <div class="nav">
-      <div class="icon">Icon</div>
-      <h2>Navigation</h2>
-      <div class="search">Search</div>
-    </div>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <h2>Table</h2>
-  </div>
+    <search></search>
+    <meteorite-table></meteorite-table>
   </div>
 </template>
 
 <script>
+import Search from './Search'
+import MeteoriteTable from './MeteoriteTable'
+
 export default {
   name: 'MainPage',
+  components: {Search, MeteoriteTable},
   data () {
     return {
-      msg: 'Welcome to Your Meteorite Explorer'
     }
   }
 }
