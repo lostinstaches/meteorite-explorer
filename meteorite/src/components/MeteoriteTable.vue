@@ -1,5 +1,15 @@
-<template>
-<h1>{{meteorites}}</h1>
+<template xmlns:v-slot="http://www.w3.org/1999/XSL/Transform">
+<v-card>
+  <v-data-table
+    :headers="headers"
+    :items="meteorites"
+    ></v-data-table>
+  <template v-slot:items="props">
+    <td>{{props.item.id}}</td>
+    {{items}}
+  </template>
+  {{meteorites}}
+</v-card>
 </template>
 
 <script>
@@ -7,6 +17,13 @@ export default {
   name: 'Table',
   data () {
     return {
+      headers: [
+        {
+          text: 'id',
+          align: 'left',
+          sortable: false,
+          value: 'id'
+        }],
       meteorites: []
     }
   },
