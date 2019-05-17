@@ -1,5 +1,9 @@
 <template>
-    <h1>Search</h1>
+  <div>
+    <label>
+      <input placeholder="Search"/>
+    </label>
+  </div>
 </template>
 
 <script>
