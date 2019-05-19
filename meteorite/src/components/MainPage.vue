@@ -1,17 +1,15 @@
 <template>
   <div>
-    <search></search>
     <meteorite-table></meteorite-table>
   </div>
 </template>
 
 <script>
-import Search from './Search'
 import MeteoriteTable from './MeteoriteTable'
 
 export default {
   name: 'MainPage',
-  components: {Search, MeteoriteTable},
+  components: {MeteoriteTable},
   data () {
     return {
     }
